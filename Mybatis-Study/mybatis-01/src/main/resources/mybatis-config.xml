@@ -5,15 +5,21 @@
 <!--configuration核心配置文件-->
 <configuration>
 
+    <settings>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+<!--        关闭缓存-->
+        <setting name="localCacheScope" value="STATEMENT"/>
+    </settings>
+
     <environments default="development">
         <environment id="development">
             <transactionManager type="JDBC"/>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url"
-                          value="jdbc:mysql://localhost:3306/mybatis?useSSL=true&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+                          value="jdbc:mysql://localhost:3306/mybatis?characterEncoding=UTF-8"/>
                 <property name="username" value="root"/>
-                <property name="password" value="admin"/>
+                <property name="password" value="12345678"/>
             </dataSource>
         </environment>
     </environments>

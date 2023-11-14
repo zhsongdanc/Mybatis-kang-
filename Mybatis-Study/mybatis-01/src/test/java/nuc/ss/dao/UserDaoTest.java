@@ -36,7 +36,7 @@ public class UserDaoTest {
         List<User> userList = userMapper.getUserList();
 
         //方式二：
-        //List<User> userList = sqlSession.selectList("nuc.ss.dao.UserMapper.getUserList");
+//        List<User> userList = sqlSession.selectList("nuc.ss.dao.UserMapper.getUserList");
 
         for (User user : userList) {
             System.out.println(user);

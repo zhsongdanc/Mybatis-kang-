@@ -1,4 +1,6 @@
 package nuc.ss.dao;
+import org.apache.ibatis.annotations.Param;
+import java.util.Collection;
 
 import nuc.ss.pojo.User;
 
@@ -53,4 +55,6 @@ public interface UserMapper {
      * @return
      */
     int deleteUser(int id);
+
+    int insertBatch(@Param("userCollection") Collection<User> userCollection);
 }

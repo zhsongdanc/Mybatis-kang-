@@ -19,4 +19,11 @@
     <select id="getUserByRowBounds" resultMap="UserMap">
         select * from mybatis.user;
     </select>
+    <insert id="insertBatch">
+        insert into user(id,name,pwd)
+        values
+        <foreach collection="userCollection" item="item" separator=",">
+            (#{item.id},#{item.name,jdbcType=VARCHAR},#{item.pwd,jdbcType=VARCHAR})
+        </foreach>
+    </insert>
 </mapper>
