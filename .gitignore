@@ -27,4 +27,5 @@ short-url.iml
 */*.iml
 **/*.iml
 .idea
+**/target/
 
