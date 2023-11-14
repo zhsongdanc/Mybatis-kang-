@@ -24,6 +24,7 @@
 hs_err_pid*
 
 short-url.iml
-*.iml
+*/*.iml
+**/*.iml
 .idea
 
